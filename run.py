@@ -47,7 +47,6 @@ def create_alarm(subdomain_name, sns_topic):
         ],
         MetricName="UrlAvailability",
         Namespace="Website",
-        Statistic="Average",
         Dimensions=[
             {
                 "Name": "Subdomain",
@@ -55,9 +54,10 @@ def create_alarm(subdomain_name, sns_topic):
             }
         ],
         Period=60,
-        Unit="Seconds",
-        EvaluationPeriods=5,
         Threshold=1,
+        Statistic="Average",
+        DatapointsToAlarm=2,
+        EvaluationPeriods=10,
         ComparisonOperator="LessThanThreshold",
         TreatMissingData="breaching"
     )

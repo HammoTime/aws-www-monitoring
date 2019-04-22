@@ -102,3 +102,10 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+# terraform
+.terraform
+*.zip
+*.tfstate
+*.terraform.tfstate.lock.info
+*.tfstate.backup
