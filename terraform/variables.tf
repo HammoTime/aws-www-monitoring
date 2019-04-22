@@ -1,0 +1,1 @@
+variable "script_name" { default = "web_monitoring" }
